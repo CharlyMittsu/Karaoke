@@ -94,12 +94,20 @@ while choix == 2:
 while choix == 1:
     cPerso = 0
     while cPerso <1 or cPerso >2:
-        cPerso = int(input("(1): Lancer une chanson (2): revenir au menu principal"))
+        cPerso = int(input("(1): Lancer une chanson (2): revenir au menu principal (3): tableau des scores"))
     if cPerso==1:
         cMusique = -1
         while cMusique not in range (album):
             cMusique=int(input("choisissez une musique"))
         for i in range (party):
-            score = int(input"entrer le score de",party[i].getPseudo())
+            score = int(input("entrez le score de ",party[i].getPseudo()))
+            party[i].score(score,cMusique)
     if cPerso == 2:
         choix = 0
+    if cPerso == 3:
+        for i in range (party):
+            print (party[i].getPseudo())
+            print('meilleur score : ',party[i].getBest())
+            print('pire score : ',party[i].getworst())
+            print('moyenne score : ',party[i].getMoyenne())
+            print("__________")
