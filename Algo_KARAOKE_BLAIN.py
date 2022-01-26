@@ -49,7 +49,7 @@ class Joueur :
 choix = 0
 party = []
 game = True
-while game is TRUE:
+while game == True:
     while choix<1 or choix>3:
         print ("Veuillez choisir entre ")
         print ("(1):Créer un nouveau joueur ")
